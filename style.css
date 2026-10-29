@@ -1,0 +1,387 @@
+*{box-sizing: border-box;
+}
+
+head {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: black;
+	background: lightgray;
+	font-family: Georgia;
+	line-height: 1.5;
+}
+
+.navdesktop {
+	display: block;
+}
+
+.logo {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: margin-left;
+}
+
+#masthead {
+	text-align: center;
+	padding:0;
+	margin:0;
+	font-size: 50px;
+}
+
+
+.navbar ul {
+	list-style-type: none;
+	text-align: center;
+	display: flex;
+	justify-content: flex-end;
+	padding: 0 20px;
+}
+
+.navbar a {
+	color: black;
+	text-decoration: none;
+	font-family: Georgia, serif;
+	font-weight: bold;
+	letter-spacing: -2px;
+	padding: 10px;
+	display: flex;
+	list-style: none;
+}
+
+/*cover design here*/
+.cover {
+	background-color: #f3f3f3;
+	color: #111;
+}
+.cover section {
+	padding: 25px 30px;
+	border-bottom: 1px dashed #d0d0d0;
+}
+.intro {
+	width: 100%;
+}
+.intro p {
+	margin: 0;
+	font-size: 24px;
+}
+
+.intro h2 {
+	background: none;
+	color: #111;
+	text-align: left;
+	font-size: 36px;
+	padding: 0px;
+	margin: 0px;
+	font-weight: normal;
+}
+.intro .description {
+	max-width: 310px;
+	margin-top: 12px;
+	font-size: 17px;
+	line-height: 1.2;
+}
+
+.magazine {
+	text-align: right;
+}
+
+.magazine h2 {
+	background: none;
+	color: #111;
+	font-size: 44px;
+	font-weight: normal;
+	padding: 0px;
+	margin: 0px;
+}
+
+.magazine p {
+	margin: 0;
+	fontsize: 16px;
+}
+.cover-header {
+	background-color: black;
+	color: white;
+	padding: 25px 30px 15px;
+}
+.cover-header #masthead {
+	color: white;
+	text-align: left;
+	font-weight: normal;
+	line-height: 1;
+}
+.cover-header .logo {
+	color: white;
+}
+/*Hamburger issue here vvvv */
+
+/* Beginning of mobile nav style here */
+
+	.navmobile {
+	  display: none;
+	  width: 100%;
+	  background-color: lightgray;
+	  font-family: Georgia, serif;
+	  font-weight: bold;
+	  font-size: 15px;
+	}
+
+	.navmobile > * {
+	/*   flex-grow: 1; */
+	}
+
+	.navmobile h1 {
+	  margin-left: 1rem;
+	color: black;
+	text-align: center;
+	}
+
+	.navmobile a {
+	  text-decoration: none;
+	}
+
+	/* "Hide" checkbox -- moves it off screen*/
+	#menu-btn {
+	  position: absolute;
+	  top: -100%;
+	  left: -100%;
+	}
+
+	/* Hide hamburger for bigger screens */
+	.menu-icon {
+	  visibility: hidden;
+	  display: none;
+	  cursor: pointer;
+	  padding: 15px;
+	}
+
+	.menu {
+	  display: none;
+	  justify-content: space-between;
+	  align-items: center;
+	  max-width: 250px;
+	  margin-right: 2rem;
+	
+	}
+/* End of mobile nav code above here */
+
+h2 {
+	background-color: #f3f3f3;
+	color: black;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 50px;
+}
+.voxmagazine {
+	background-color: none;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.topsection {
+	background-color: lightgray;
+	height: 500px;
+	display: flex;
+}
+
+.topsection div {
+	background-color: lightgray;
+	width: 50%;
+	height: 400px;
+	margin: 10px;
+}
+
+.bodytext {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.bodytext img {
+	max-width: 300px;
+	height: auto;
+}
+/* Media head start*/
+@media (max-width: 600px) {
+	.navdesktop {
+		display: none;
+	}
+
+	.navmobile {
+	    display: grid;
+	    grid-template-columns: auto 1fr auto;
+	    grid-template-areas:
+	       "logo   title   hamburger"
+	       "nav     nav     nav";
+	       align-items: center;
+	       padding: 10px;
+	  }
+	  #mobile-masthead {
+	  	grid-area: title;
+	  	font-size: 35px;
+	  	text-align: center;
+	  	margin: 0;
+	  }
+
+	  .navmobile .logo {
+	  	grid-area: logo;
+	  	font-size: 22px;
+	  }
+	  
+	  h1 {
+	    grid-area: title;
+	  }
+	  
+	  .menu a {
+	    text-decoration: none;
+	    color: black;
+	  }
+
+	  .menu-btn {
+	    display: none;
+	  }
+
+	  .menu-icon {
+	    grid-area: hamburger;
+	    cursor: pointer;
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: baseline;
+	    padding: 30px 20px 30px 0;
+	    position: relative;
+	    user-select: none;
+	    visibility: visible;
+	  }
+
+	  .navicon {
+	    background: #333;
+	    display: block;
+	    height: 2px;
+	    width: 18px;
+	    position: relative;
+	  }
+
+	  .navicon:before {
+	    top: 8px;
+	  }
+
+	  .navicon:after {
+	    top: -8px;
+	  }
+
+	  .navicon:before, .navicon:after {
+	    background: #333;
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	    content: '';
+	    position: absolute;
+	    transition: all .2s ease-out;
+	  }
+
+	  .menu {
+	    grid-area: nav;
+	    max-width: unset;
+	    max-height: 0;
+	    transition: max-height .2s ease-out;
+	    overflow: hidden;
+	    margin: 0;
+	    padding: 0;
+	    background-color: #fff;
+	    display: flex;
+	    flex-direction: column;
+	  }
+
+	  .menu a {
+	    padding: 20px 20px;
+	    border-right: 1px solid #f4f4f4;
+	    background-color: #eee;
+	    width: 100%;
+	    text-align: center;
+	  }
+
+	  .menu-btn:checked ~ .menu {
+	    max-height: 240px;
+	  }
+
+	  .menu-btn:checked ~ .menu-icon .navicon {
+	    background: transparent;
+	  }
+
+	  .menu-btn:checked ~ .menu-icon .navicon:before {
+	    transform: rotate(-45deg);
+	  }
+
+	  .menu-btn:checked ~ .menu-icon .navicon:after {
+	    transform: rotate(45deg);
+	  }
+
+	  .menu-btn:checked ~ .menu-icon .navicon:before,
+	  .menu-btn:checked ~ .menu-icon .navicon:after {
+	    top: 0;
+	  }
+}
+
+
+
+
+/* magazine cover MOBILE HERE*/
+@media (max-width: 600px) {
+	.cover section {
+		padding: 22px 20px;
+	}
+	.intro .description {
+		max-width: 290px;
+	}
+	.magazine h2 {
+		font-size: 36px;
+	}
+	.magazine p {
+		max-width: 300px;
+		margin-left: auto;
+	}
+}
+
+
+
+@media (max-width: 600px) {
+.navdesktop {
+	display: none;
+}
+
+.navmobile {
+	display: grid;
+}
+	.navbar ul {
+		justify-content: left;
+
+	}
+	h2 {
+		font-size: 1.8rem;
+		padding: 15px 0;
+	}
+	.topsection {
+		flex-direction: column;
+		min-height: auto;
+	}
+
+	.topsection div {
+		width: 90%;
+		height: 250px;
+		margin: 10px 5%;
+	}
+}
+
+
+
+@media(min-width: 1200px) {
+	body {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+}
